@@ -25,6 +25,7 @@ namespace Proiect_3
             InitializeComponent();
         }
 
+        //TODO: 
         public Task GetDataFromCSV()
         {
             lblStatus.Text = "Status: LOADING...";
