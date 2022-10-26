@@ -103,6 +103,8 @@ namespace Proiect_3
             btnNormalize.Enabled = false;
             btnTestingData.Enabled = true;
             btnTrainingData.Enabled = true;
+
+            NeuralNetwork.getInstance().setData(training_normData, testing_normData);
         }
 
         private void btnTrainingData_Click(object sender, EventArgs e)
