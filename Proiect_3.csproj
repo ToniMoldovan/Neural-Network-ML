@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Enums.cs" />
+    <Compile Include="Classes\Layer.cs" />
+    <Compile Include="Classes\NeuralNetwork.cs" />
+    <Compile Include="Classes\Neuron.cs" />
     <Compile Include="Classes\NormHouseData.cs" />
     <Compile Include="Classes\RawHouseData.cs" />
     <Compile Include="Classes\Worker.cs" />

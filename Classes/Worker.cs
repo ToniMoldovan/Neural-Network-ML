@@ -49,7 +49,6 @@ namespace Proiect_3.Classes
                 };
 
                 result.Add(tempData);
-                Console.WriteLine("obiect adaugat");
             }
 
             return result;
