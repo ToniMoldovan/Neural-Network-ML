@@ -23,6 +23,14 @@ namespace Proiect_3
         public MainForm()
         {
             InitializeComponent();
+            NeuralNetwork.getInstance().GenerateNetwork(this);
+            Console.WriteLine("Network generated successfully!");
+        }
+
+        public void SetStatus(int status)
+        {
+            if (status == 1) lblStatus.Text = "Status: Reached Targer Err.";
+            else if (status == 0) lblStatus.Text = "Status: Finished";
         }
 
         //TODO: 
@@ -103,6 +111,7 @@ namespace Proiect_3
             btnNormalize.Enabled = false;
             btnTestingData.Enabled = true;
             btnTrainingData.Enabled = true;
+            btnTrainData.Enabled = true;
 
             NeuralNetwork.getInstance().setData(training_normData, testing_normData);
         }
@@ -115,6 +124,15 @@ namespace Proiect_3
         private void btnTestingData_Click(object sender, EventArgs e)
         {
             dgv.DataSource = testing_normData;
+        }
+
+        private void btnTrainData_Click(object sender, EventArgs e)
+        {
+            lblStatus.Text = "Status: Calculating..";
+            lblStatus.Visible = true;
+            btnTrainData.Enabled = false;
+
+            NeuralNetwork.getInstance().backgroundWorker.RunWorkerAsync();
         }
     }
 }

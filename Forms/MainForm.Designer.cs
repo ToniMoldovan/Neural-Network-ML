@@ -34,6 +34,7 @@
             this.btnNormalize = new System.Windows.Forms.Button();
             this.btnTrainingData = new System.Windows.Forms.Button();
             this.btnTestingData = new System.Windows.Forms.Button();
+            this.btnTrainData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(12, 28);
+            this.lblStatus.Location = new System.Drawing.Point(12, 352);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(43, 13);
             this.lblStatus.TabIndex = 2;
@@ -105,12 +106,28 @@
             this.btnTestingData.UseVisualStyleBackColor = true;
             this.btnTestingData.Click += new System.EventHandler(this.btnTestingData_Click);
             // 
+            // btnTrainData
+            // 
+            this.btnTrainData.AutoSize = true;
+            this.btnTrainData.BackColor = System.Drawing.Color.White;
+            this.btnTrainData.Enabled = false;
+            this.btnTrainData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrainData.ForeColor = System.Drawing.Color.Lime;
+            this.btnTrainData.Location = new System.Drawing.Point(12, 287);
+            this.btnTrainData.Name = "btnTrainData";
+            this.btnTrainData.Size = new System.Drawing.Size(188, 30);
+            this.btnTrainData.TabIndex = 6;
+            this.btnTrainData.Text = "TRAIN DATA";
+            this.btnTrainData.UseVisualStyleBackColor = false;
+            this.btnTrainData.Click += new System.EventHandler(this.btnTrainData_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1357, 514);
+            this.Controls.Add(this.btnTrainData);
             this.Controls.Add(this.btnTestingData);
             this.Controls.Add(this.btnTrainingData);
             this.Controls.Add(this.btnNormalize);
@@ -135,6 +152,7 @@
         private System.Windows.Forms.Button btnNormalize;
         private System.Windows.Forms.Button btnTrainingData;
         private System.Windows.Forms.Button btnTestingData;
+        private System.Windows.Forms.Button btnTrainData;
     }
 }
 
