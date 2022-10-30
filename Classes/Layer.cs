@@ -30,7 +30,19 @@ namespace Proiect_3.Classes
                 {
                     temp.weightValue[j] = random.NextDouble() * (maximum - minimum) + minimum;
                 }
+
+                neurons.Add(temp);
             }
+        }
+
+        public List<double> GetDeltas()
+        {
+            List<double> deltas = new List<double>();
+            foreach (Neuron neuron in neurons)
+            {
+                deltas.Add(neuron.delta);
+            }
+            return deltas;
         }
 
         private void calculateOutputValue(Neuron neuron)
